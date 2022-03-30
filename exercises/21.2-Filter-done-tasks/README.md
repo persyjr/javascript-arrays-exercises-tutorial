@@ -8,6 +8,6 @@
 
 ```js
 [ { label: 'Eat my lunch', done: true },
-  { label: 'Finish my exercises', done: true },
+  { label: 'Replit the finishes', done: true },
   { label: 'Read a book', done: true } ]
 ```
