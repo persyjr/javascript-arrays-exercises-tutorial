@@ -10,3 +10,9 @@ let tasks = [
 ];
 
 //your code here
+let resultingTasks =tasks.filter(function(object){
+
+    return (object.done==true);
+});
+
+console.log(resultingTasks);

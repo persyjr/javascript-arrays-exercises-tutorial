@@ -7,7 +7,37 @@ let people = [
 ];
 
 let simplifier = function(person){
-	return person.name;
+	
+	var año= person.birthDate.getYear();
+	var mes= (person.birthDate.getMonth())/12;
+	var dia= (person.birthDate.getMonth())/365;
+	
+	var hoy =new Date(2017,8,30);
+
+	var year1=hoy.getYear()-año;
+	var month1=mes-(hoy.getMonth()/12);
+	//var dia1=(hoy.getDate()/365)-dia;
+	var year2;
+	
+	/*console.log(hoy.getMonth()/12)	
+	console.log(mes)
+	console.log(year1)*/
+
+	console.log(month1);
+	if (month1<=0){
+		
+		year2=year1;
+		
+	}else{
+		
+		year2=year1+mes+month1+dia;
+	}
+
+	return 'Hello, my name is '+person.name+' and I am '+Math.floor(year2);
+	
 };
 
+
 console.log(people.map(simplifier));
+
+
